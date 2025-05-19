@@ -17,6 +17,7 @@
             top: 5%;
             left: 45%;
             margin: 1vw;
+            padding: 1vw;
         }
     </style>
     <button id="button" onclick="alert('Hello'), console.log('ccn')"
@@ -26,6 +27,33 @@
 
     <button type="button" id="anotherBtn"></button>
     <h1 id="btn"></h1>
+
+    <style>
+        body {
+            background-color: #4d5a4739;
+            transition: all .3s ease-in-out !important;
+        }
+
+        .btn {
+            width: fit-content;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 1vw;
+            padding: 1vw;
+            background-color: #13fbc59c;
+            backdrop-filter: blur(10px);
+            color: rgba(193, 44, 91, 0.622);
+            box-shadow: 0px 0px 10px 2px black;
+            transition: all .3s ease-in-out !important;
+        }
+    </style>
+
+    <button class="btn" id="touchBtn">
+        <h1 id="TBtnFill"></h1>
+    </button>
 
     <script src="script.js"></script>
     <script src="button.js"></script>
