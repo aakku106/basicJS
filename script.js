@@ -39,8 +39,9 @@ console.log('--------------------------------------')
 console.log('C')
 
 let c = 111;//wouu
+console.log(c)
 {
-    let c = 123;
+    let c = 123;// byra goyasi {} byra ko value ligxa.
     console.log(c)
 }
 console.

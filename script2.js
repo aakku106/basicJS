@@ -27,3 +27,14 @@ names();
 
 console.log('--------------------------------------')
 console.log('--------------------------------------')
+
+// Const decleare garda value assign garnu porxa hehe..
+
+
+function undefined(){
+    let a;
+    console.log("a:", a)
+    var b;
+    console.log("b:", b)
+}
+undefined();
