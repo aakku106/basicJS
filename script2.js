@@ -38,3 +38,11 @@ function undefined(){
     console.log("b:", b)
 }
 undefined();
+
+// ________________________- datatypes in js-----------------------//
+    // 1. string
+    // 2. number
+    // 3. Boolean
+    // 4. null
+    // 5. Undefined
+    // 6. BigInt
