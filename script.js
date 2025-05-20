@@ -17,17 +17,19 @@ console.log(catLet, "\n",car,"\n",catVar)
 console.log('--------------------------------------')
 console.log('a')
 var a =3;//Functional scope
+console.log(a)
 {
     var a = 4;
     console.log(a)
 }
 console.log(a)
 // a =000;
-console.log(a)
+// console.log(a)
 console.log('--------------------------------------')
 console.log('b')
 
 const b = 106;
+console.log(b)
 {
     const b = 103;
     console.log(b)
@@ -38,7 +40,7 @@ console.log(b)
 console.log('--------------------------------------')
 console.log('C')
 
-let c = 111;//wouu
+let c = 111;//wouu// its block scope
 console.log(c)
 {
     let c = 123;// byra goyasi {} byra ko value ligxa.
