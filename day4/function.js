@@ -32,3 +32,4 @@ console.log(WithReturnAdd("ccn", "weee"));
 result_op = (a, b) => {
   return a + b;
 };
+console.log(result_op(10, 10));
