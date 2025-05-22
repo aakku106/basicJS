@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work---Payment history</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 1vw;
+            margin: 1vw;
+            border-radius: 12px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            background-color: #ff00d022;
+            box-shadow: 0px 0px 15vw rgba(7, 1, 29, 0.647);
+            border: none;
+            transition: all .3s ease-in-out;
+            perspective: 100px;
+
+            &:hover {
+                box-shadow: 0px 0px 10vw 3vw rgba(15, 2, 62, 0.279) !important;
+                transform: scale(1.003) !important;
+                background-color: #f405c825;
+                backdrop-filter: blur(5px);
+            }
+        }
+
+        body {
+            background-color: #17747984;
+            height: 85vh;
+
+            &:hover {
+                background-color: #1b7d8277;
+            }
+        }
+
+        h1 {
+            background-color: #76e1185b;
+
+            &:hover {
+                background-color: #79e11f63;
+            }
+        }
+
+        #transictionHistory {
+            background-color: #ffffff65;
+            color: darkgreen;
+            backdrop-filter: blur(5px) !important;
+
+            &:hover {
+                background-color: #aca0a069;
+                color: darkgreen;
+                /* color: rgb(3, 146, 3); */
+                backdrop-filter: blur(3px) !important;
+            }
+
+            pre {
+                &:hover {
+                    background-color: #ea04c013 !important;
+                    box-shadow: 0px 0px 10px rgba(11, 62, 50, 0.275) !important;
+                    transform: scale(1.06) !important;
+                }
+            }
+        }
+    </style>
+    <h1><u>History</u></h1>
+    <p id="transictionHistory"></p>
+    <script src="hw.js"></script>
+</body>
+
+</html>
