@@ -61,24 +61,10 @@ do {
   }
 } while (input !== 4);
 
-console.log(transactionHistory);
+let doc = document.getElementById("transictionHistoryFormated");
 
-document.getElementById("transictionHistory").innerHTML =
-  "<pre>" + JSON.stringify(transactionHistory, null, 2) + "</pre>";
-
-var ccn;
-console.log(transactionHistory.length);
 transactionHistory.forEach((element) => {
-  ccn = `      <li>  ${element.type}
-
-  </li>  <li>  ${element.totalAmount}
-  </li>  <li>  ${element.date}
-  </li>  `;
+  var ccn = document.createElement("li");
+  ccn.textContent = `${element.type}-${element.date}-${element.totalAmount}`;
+  doc.appendChild(ccn);
 });
-// document.getElementById("transictionHistoryFormated").innerHTML = ccn;
-
-// transactionHistory.forEach((element) => {
-//   console.log(element.type, element.date, element.totalAmount)
-// });
-
-document.createElement("transictionHistoryFormated").innerHTML = ccn;
