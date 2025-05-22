@@ -65,3 +65,20 @@ console.log(transactionHistory);
 
 document.getElementById("transictionHistory").innerHTML =
   "<pre>" + JSON.stringify(transactionHistory, null, 2) + "</pre>";
+
+var ccn;
+console.log(transactionHistory.length);
+transactionHistory.forEach((element) => {
+  ccn = `      <li>  ${element.type}
+
+  </li>  <li>  ${element.totalAmount}
+  </li>  <li>  ${element.date}
+  </li>  `;
+});
+// document.getElementById("transictionHistoryFormated").innerHTML = ccn;
+
+// transactionHistory.forEach((element) => {
+//   console.log(element.type, element.date, element.totalAmount)
+// });
+
+document.createElement("transictionHistoryFormated").innerHTML = ccn;
