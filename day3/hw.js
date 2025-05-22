@@ -32,6 +32,7 @@ do {
         totalAmount: amount,
         date: new Date().toLocaleTimeString(),
       });
+      alert("Total amount in account: " + amount);
       break;
     case 2:
       deposit = parseFloat(prompt("\nEnter amount to Deposit\n"));
