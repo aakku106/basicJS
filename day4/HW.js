@@ -11,16 +11,31 @@
 // // check frequency and based on that print frequent, common, rare
 
 array = [1, 1, 1, 1, 2, 2, 2, 3];
-counter = 0;
-
+frequency = {};
 countFrequency = (array) => {
   array.forEach((i) => {
-    if (array[i] === array[i + 1]) ++counter;
+    if (!frequency[i]) frequency[i] = 1;
+    else frequency[i]++;
   });
-  return counter;
 };
+countFrequency(array);
+console.log(frequency);
 
-var count = countFrequency(array);
-if (count >= 4) {
-  document.getElementById("show").innerHTML = "frequent";
+const showText = document.getElementById("show");
+
+for (key in frequency) {
+  var ccn = document.createElement("li");
+  if (frequency[key] >= 4) {
+    // document.getElementById("show").innerHTML = "Frequent";
+    ccn.textContent = ` ${frequency[key]} is  frequent`;
+    showText.append(ccn);
+  } else if (frequency[key] >= 3) {
+    // document.getElementById("show").innerHTML = "Common";
+    ccn.textContent = ` ${frequency[key]} is  common`;
+    showText.append(ccn);
+  } else if (frequency[key] >= 1) {
+    // document.getElementById("show").innerHTML = "rare";
+    ccn.textContent = ` ${frequency[key]} is  rare`;
+    showText.append(ccn);
+  }
 }
