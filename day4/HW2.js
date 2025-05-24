@@ -86,5 +86,11 @@ updateUi = () => {
   document.getElementById("throwError").innerHTML = error;
   document.getElementById("showClassAverage").innerHTML = output;
   document.getElementById("showClassAvergeGrade").innerHTML = averageGrade;
+  const ccn = document.getElementById("stdDetailsTable");
+  DummyArray.forEach((i) => {
+    let SN = document.createElement("td")=i;
+    let Name = document.createElement("td")=i.name;
+    let grade = document.createElement("td")=i.grade;
+  });
 };
 updateUi();
