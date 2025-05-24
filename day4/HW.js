@@ -26,16 +26,13 @@ const showText = document.getElementById("show");
 for (key in frequency) {
   var ccn = document.createElement("li");
   if (frequency[key] >= 4) {
-    // document.getElementById("show").innerHTML = "Frequent";
-    ccn.textContent = ` ${frequency[key]} is  frequent`;
+    ccn.textContent = `${key} repeats  ${frequency[key]} time which  is  frequent`;
     showText.append(ccn);
   } else if (frequency[key] >= 3) {
-    // document.getElementById("show").innerHTML = "Common";
-    ccn.textContent = ` ${frequency[key]} is  common`;
+    ccn.textContent = `${key} repeats  ${frequency[key]} time which  is  frequent`;
     showText.append(ccn);
   } else if (frequency[key] >= 1) {
-    // document.getElementById("show").innerHTML = "rare";
-    ccn.textContent = ` ${frequency[key]} is  rare`;
+    ccn.textContent = `${key} repeats  ${frequency[key]} time which  is  frequent`;
     showText.append(ccn);
   }
 }
