@@ -70,7 +70,7 @@ calculate_average = () => {
 };
 
 class_perfomance = (average) => {
-  if (average >= 90) return "A";
+  if (average > 89) return "A";
   else if (average >= 80 && average <= 89) return "B";
   else if (average >= 70 && average <= 79) return "C";
   else if (average >= 60 && average <= 69) return "D";
@@ -87,10 +87,20 @@ updateUi = () => {
   document.getElementById("showClassAverage").innerHTML = output;
   document.getElementById("showClassAvergeGrade").innerHTML = averageGrade;
   const ccn = document.getElementById("stdDetailsTable");
+  let counter = 0;
+  ccn.innerHTML = "";
   DummyArray.forEach((i) => {
-    let SN = document.createElement("td")=i;
-    let Name = document.createElement("td")=i.name;
-    let grade = document.createElement("td")=i.grade;
+    let row = document.createElement("tr");
+    let SN = document.createElement("td");
+    let Name = document.createElement("td");
+    let grade = document.createElement("td");
+    SN.textContent = ++counter;
+    Name.textContent = i.name;
+    grade.textContent = i.grade;
+    row.append(SN);
+    row.append(Name);
+    row.append(grade);
+    ccn.append(row);
   });
 };
 updateUi();
