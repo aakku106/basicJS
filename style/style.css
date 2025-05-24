@@ -43,7 +43,6 @@ p {
     background-color: #a1c41562;
     box-shadow: 0px 0px 10px rgba(11, 62, 50, 0.275) !important;
     transform: scale(1.03) !important;
-
   }
 }
 
@@ -52,6 +51,44 @@ button {
     background-color: #ea04c013 !important;
     box-shadow: 0px 0px 10px rgba(11, 62, 50, 0.275) !important;
     transform: scale(1.06) !important;
+  }
+}
+
+table {
+  margin-left: 33vw;
+  box-shadow: 0px 0px 10px;
+  border-collapse: separate;
+  border-spacing: 5px 10px !important;
+
+  &:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0px 0px 15px !important;
+  }
+
+  tbody {
+    box-shadow: 0px 0px 5px !important;
+
+    tr {
+      box-shadow: 0px 0px 5px !important;
+
+      &:hover {
+        box-shadow: 0px 0px 3px !important;
+        transform: scale(1.03) !important;
+      }
+
+      td {
+        box-shadow: 0px 0px 5px !important;
+
+        &:hover {
+          box-shadow: 0px 0px 3px !important;
+          transform: scale(1.06) !important;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 3px !important;
+    }
   }
 }
 
