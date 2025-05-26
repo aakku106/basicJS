@@ -1,0 +1,32 @@
+* {
+	padding: 1vw;
+	margin: 1vw;
+	border-radius: 12px;
+	text-align: center;
+	transition: .3s all ease-in-out;
+
+	&:hover {
+		transform: scale(1.009);
+	}
+}
+
+body {
+	background-color: white;
+	color: black;
+	box-shadow: 0px 0px 10px;
+
+	&:hover {
+		box-shadow: 0px 0px 15px;
+	}
+
+	button {
+		&:hover {
+			transform: translateY(-7px) scale(1.03) !important;
+		}
+	}
+}
+
+.dark {
+	background-color: black;
+	color: white;
+}
