@@ -9,3 +9,9 @@ let B = [3, 4];
 let c = [...A, ...B];
 
 console.log(c);
+
+//clone and merge
+
+let obj = { a: 1, b: 2 };
+let obj2 = { ...obj, b: 3 };
+console.log(obj2);
