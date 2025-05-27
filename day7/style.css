@@ -1,0 +1,12 @@
+* {
+	text-align: center;
+	border-radius: 12px;
+	transition: all .3 ease-in-out;
+	padding: 1vw;
+	margin: 1vw;
+}
+
+.dark {
+	background-color: black;
+	color: white;
+}
