@@ -1,0 +1,51 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+      * {
+        padding: 1vw;
+        margin: 1vw;
+        border-radius: 10px;
+        text-align: center;
+      }
+      button {
+        margin-left: 37%;
+        border-radius: 5px;
+        background-color: skyblue;
+        font-size: 20px;
+        box-shadow: 1px 1px 10px;
+      }
+      .display {
+        display: none;
+      }
+      #register {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      #error {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="hello">Register</h1>
+      <form id="register">
+        <input id="name" type="text" placeholder="Enter your name" />
+        <input id="email" type="email" placeholder="Enter your email" />
+        <input id="password" type="password" placeholder="Enter password" />
+        <input id="confirm" type="password" placeholder="Confirm password" />
+        <div id="error"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
