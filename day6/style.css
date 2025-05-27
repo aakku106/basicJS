@@ -3,7 +3,7 @@
 * {
   padding: 1vw;
   margin: 1vw;
-  border-radius: 12px;
+  border-radius: 10px;
   text-align: center;
   transition: 0.3s all ease-in-out;
   border: none;
@@ -29,15 +29,19 @@ body {
     }
   }
 }
+
 #toggle {
   background-color: #7341127f;
 }
+
 #add {
   background-color: #38650f68;
 }
+
 #sub {
   background-color: #850f2994;
 }
+
 #reset {
   background-color: #28661997;
 }
