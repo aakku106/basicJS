@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggleing & counter day 6 HW</title>
-        <link rel="stylesheet"  href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Toggling & counter day 6 HW</title>
+        <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
         <h1>COUNTER:<span id="counter"></span></h1>
-        <button onclick="toggleMode()" type="button">Toggle BG</button>
-        <button onclick="add()" type="button">Add Counter</button>
-        <button onclick="sub()" type="button">Sub Counter</button>
+        <button id="toggle" onclick="toggleMode()" type="button">Toggle BG</button>
+        <button id="add" onclick="add()" type="button">Add Counter</button>
+        <button id="sub" onclick="sub()" type="button">Sub Counter</button>
+        <button id="reset" onclick="reset()" type="button">reset Counter</button>
+
 
         <script src="hw.js">
         </script>
 </body>
+
 </html>
