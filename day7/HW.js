@@ -14,12 +14,12 @@ let errorText = "";
 SubmitDetails = () => {
   errorText = "";
   showError.style.display = "none";
-  if (password.value.trim().length < 8) {
-    errorText += "\nPassword Must be more than 8 character\n";
+  if (username.value.trim().length < 4) {
+    errorText += "\nUser name shall be more than 4 character\n";
     showError.innerHTML = errorText;
     showError.style.display = "block";
-  } else if (username.value.trim().length < 4) {
-    errorText += "\nUser name shall be more than 4 character\n";
+  } else if (password.value.trim().length < 8) {
+    errorText += "\nPassword Must be more than 8 character\n";
     showError.innerHTML = errorText;
     showError.style.display = "block";
   } else {
