@@ -1,0 +1,65 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="stylesheet" type="" href="HW.css" />
+  </head>
+
+  <body>
+    <main>
+      <form id="form">
+        <!-- <div id="form"> -->
+        <span class="bthHolder">
+          <b>
+            <u>
+              <label for="">User name </label>
+            </u>
+          </b>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your User name"
+            required />
+        </span>
+        <span class="bthHolder">
+          <b
+            ><u>
+              <label for="">Email</label>
+            </u></b
+          >
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="Enter your Email address" />
+        </span>
+        <span class="bthHolder">
+          <b
+            ><u>
+              <label for="">Password</label>
+            </u></b
+          >
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Enter your password" />
+        </span>
+        <span id="showError"> </span>
+        <span class="bthHolder">
+          <input
+            type="submit"
+            id="Submit"
+            value="Submit"
+            onclick="SubmitDetails()" />
+        </span>
+      </form>
+      <!-- </div> -->
+    </main>
+  </body>
+  <script src="HW.js"></script>
+</html>
