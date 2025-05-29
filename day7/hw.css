@@ -1,8 +1,8 @@
 /** @format */
 
 * {
-  padding: 1vw;
-  /* margin: 1vw; */
+  padding: 1rem;
+  margin: 0.1rem;
   border-radius: 10px;
   text-align: center;
   backdrop-filter: blur(10px);
@@ -12,12 +12,35 @@
 
 body {
   background-color: rgba(65, 105, 225, 0.669);
+  height: max-content;
+
   main {
     #form {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-55%, 0%);
+      transform: translate(-50%, 0%);
+    }
+  }
+
+  div {
+    position: absolute;
+    bottom: -700%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    height: 20rem;
+    width: 25rem;
+    padding: 2rem;
+    background-color: rgba(10, 63, 223, 0.19);
+
+    #showDetails {
+      text-align: left;
+      height: 15rem;
+      width: 20rem;
+      background-color: rgba(16, 58, 183, 0.348);
+      position: absolute;
+      top: 10%;
     }
   }
 }
@@ -29,15 +52,18 @@ body {
   gap: 1rem;
   background-color: #fe154f2d;
   width: fit-content;
-  padding: 2vw !important;
+  padding: 2rem !important;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.237);
+
   &:hover {
     box-shadow: 0px 0px 15px 6px rgba(46, 6, 71, 0.41) !important;
   }
 }
+
 input {
   background-color: #ffffff7c;
   min-width: 15rem;
+
   &:hover {
     transform: scale(1.05);
   }
@@ -50,13 +76,42 @@ input {
   max-width: 300px;
   background-color: #ffffff2d;
   box-shadow: 0px 0px 10px 3px rgba(172, 17, 255, 0.155);
+
   &:hover {
     box-shadow: 0px 0px 20px 5px rgba(117, 6, 157, 0.314);
   }
 }
+
 #Submit {
   background-color: #06ff1b48;
+  margin-bottom: 1rem;
+
   &:active {
+    background-color: #0b89165a;
     transform: translateY(-7px) !important;
+  }
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.777);
+  border-radius: 50%;
+  width: 1rem !important;
+  height: 1rem !important;
+  left: 7%;
+  top: 3%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 106;
+
+  &:hover {
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+    background-color: rgba(173, 26, 58, 0.983);
+    box-shadow: 0px 0px 10px 5px rgba(227, 41, 115, 0.513);
+
+    &::before {
+      content: "x";
+    }
   }
 }
