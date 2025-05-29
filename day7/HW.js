@@ -25,11 +25,11 @@ const SubmitDetails = (e) => {
   showError.style.display = "none";
   if (username.value.trim().length < 4) {
     errorText += "User name shall be more than 4 character <br>";
-    username.style.border = "1px solid red";
+    username.style.border = "1.5px solid red";
   } else username.style.border = "none";
   if (!email.checkValidity()) {
     errorText += "Please enter a valid email address.<br>";
-    email.style.border = "1px solid red";
+    email.style.border = "1.5px solid red";
   } else email.style.border = "none";
 
   if (password.value.trim().length < 8) {
