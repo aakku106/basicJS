@@ -41,9 +41,9 @@ hello.classList.remove("mehhh");
 hello.classList.add("light");
 hello.classList.toggle("dark");
 hello.classList.toggle("dark");
-const bth = getElementById("clk");
-const body = getElementById("body");
-body = () => {
+const bth = document.getElementById("clk");
+const body = document.getElementById("body");
+bodyE  = () => {
   bth.classList.add("light");
   bth.classList.toggle("dark");
 };

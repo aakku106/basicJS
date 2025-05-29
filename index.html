@@ -1,62 +1,169 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Training | Basic to mid level</title>
     <style>
-        #button,
-        #buttonn {
-            height: 10vh;
-            width: 10vw;
-            border-radius: 10px;
-            top: 5%;
-            left: 45%;
-            margin: 1vw;
-            padding: 1vw;
-        }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        min-height: 100vh;
+        padding: 2rem;
+        margin: 0;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: #1d1d1f;
+      }
+
+      p {
+        color: #515154;
+        margin-bottom: 2rem;
+        font-weight: 300;
+      }
+
+      .day-section {
+        margin-bottom: 1.5rem;
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .day-section:hover {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        transform: translateY(-2px);
+      }
+
+      .day-title {
+        padding: 1rem 1.5rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #1d1d1f;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .day-title::after {
+        content: "›";
+        font-size: 1.5rem;
+        transform: rotate(90deg);
+        transition: transform 0.3s ease;
+      }
+
+      .day-title.collapsed::after {
+        transform: rotate(0deg);
+      }
+
+      .day-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .day-links a {
+        background-color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        color: #1d1d1f;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .day-links a:hover {
+        background-color: rgba(0, 122, 255, 0.1);
+        border-color: rgba(0, 122, 255, 0.2);
+      }
     </style>
-    <button id="button" onclick="alert('Hello'), console.log('ccn')"
-        onmouseleave="alert('weeeeee'),prompt('weee','ccc')"></button>
-    <button id="buttonn" onclick="console.log('weeeeeeeeeeeeee')"></button>
+  </head>
+  <body>
+    <h1>JavaScript Training</h1>
+    <p>Navigation for training materials</p>
 
+    <div class="day-section">
+      <h2 class="day-title">Day 1</h2>
+      <div class="day-links">
+        <a href="day1/index.html">Main Page</a>
+      </div>
+    </div>
 
-    <button type="button" id="anotherBtn"></button>
-    <h1 id="btn"></h1>
+    <div class="day-section">
+      <h2 class="day-title">Day 2</h2>
+      <div class="day-links">
+        <a href="day2/check.html">Check HTML</a>
+      </div>
+    </div>
 
-    <style>
-        body {
-            background-color: #4d5a4739;
-            transition: all .3s ease-in-out !important;
-        }
+    <div class="day-section">
+      <h2 class="day-title">Day 3</h2>
+      <div class="day-links">
+        <a href="day3/index.html">Main Page</a>
+        <a href="day3/hw.html">Homework</a>
+      </div>
+    </div>
 
-        .btn {
-            width: fit-content;
-            border-radius: 10px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 1vw;
-            padding: 1vw;
-            background-color: #13fbc59c;
-            backdrop-filter: blur(10px);
-            color: rgba(193, 44, 91, 0.622);
-            box-shadow: 0px 0px 10px 2px black;
-            transition: all .3s ease-in-out !important;
-        }
-    </style>
+    <div class="day-section">
+      <h2 class="day-title">Day 4</h2>
+      <div class="day-links">
+        <a href="day4/HW.html">Homework 1</a>
+        <a href="day4/HW2.html">Homework 2</a>
+      </div>
+    </div>
 
-    <button class="btn" id="touchBtn">
-        <h1 id="TBtnFill"></h1>
-    </button>
+    <div class="day-section">
+      <h2 class="day-title">Day 5</h2>
+      <div class="day-links">
+        <a href="day5/index.html">Main Page</a>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
-    <script src="button.js"></script>
-</body>
+    <div class="day-section">
+      <h2 class="day-title">Day 6</h2>
+      <div class="day-links">
+        <a href="day6/index.html">Main Page</a>
+        <a href="day6/hw.html">Homework</a>
+      </div>
+    </div>
 
+    <div class="day-section">
+      <h2 class="day-title">Day 7</h2>
+      <div class="day-links">
+        <a href="day7/index.html">Main Page</a>
+        <a href="day7/HW.html">Homework</a>
+        <a href="day7/sanjitaKoCode/index.html">Sanjita's Code</a>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".day-title").forEach((title) => {
+        title.classList.add("collapsed");
+        const links = title.nextElementSibling;
+        links.style.display = "none";
+
+        title.addEventListener("click", () => {
+          title.classList.toggle("collapsed");
+          links.style.display =
+            links.style.display === "none" ? "flex" : "none";
+        });
+      });
+    </script>
+  </body>
 </html>
