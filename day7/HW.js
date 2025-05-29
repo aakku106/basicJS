@@ -7,9 +7,9 @@ const ui = document.getElementById("showDetails");
 const holder = document.getElementById("holder");
 
 let store = {
-  username: "",
-  email: "",
-  password: "",
+  username: "EMPTY",
+  email: "EMPTY",
+  password: "EMPTY",
 };
 
 showError.style.display = "none";
@@ -45,9 +45,7 @@ const SubmitDetails = (e) => {
     store.username = username.value;
     store.email = email.value;
     store.password = password.value;
-    username.value = "";
-    email.value = "";
-    password.value = "";
+    document.getElementById("form").reset();
   }
 };
 const uiShow = () => {
