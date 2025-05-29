@@ -23,6 +23,17 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
+  if (name < 4) {
+    message.textContent = "user name shall be greater than 4 ";
+    message.style.display = "block";
+    return;
+  }
+  if (password < 4) {
+    message.textContent = "user name shall be greater than 4 ";
+    message.style.display = "block";
+    return;
+  }
+
   if (password !== confirmPassword) {
     message.textContent = "Passwords do not match.";
     return;
