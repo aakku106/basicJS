@@ -12,11 +12,10 @@
   <body>
     <main>
       <form id="form">
-        <!-- <div id="form"> -->
         <span class="bthHolder">
           <b>
             <u>
-              <label for="">User name </label>
+              <label for="username">User name </label>
             </u>
           </b>
           <input
@@ -28,7 +27,7 @@
         <span class="bthHolder">
           <b
             ><u>
-              <label for="">Email</label>
+              <label for="email">Email</label>
             </u></b
           >
           <input
@@ -40,7 +39,7 @@
         <span class="bthHolder">
           <b
             ><u>
-              <label for="">Password</label>
+              <label for="password">Password</label>
             </u></b
           >
           <input
@@ -55,11 +54,15 @@
             type="submit"
             id="Submit"
             value="Submit"
-            onclick="SubmitDetails()" />
+            onclick="SubmitDetails(event)" />
+          <input type="button" value="showDetails" onclick="uiShow()" />
         </span>
       </form>
-      <!-- </div> -->
     </main>
+    <div id="holder">
+      <div class="red" onclick="hideUI()"></div>
+      <div id="showDetails"></div>
+    </div>
+    <script src="HW.js"></script>
   </body>
-  <script src="HW.js"></script>
 </html>
