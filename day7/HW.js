@@ -1,4 +1,3 @@
-/** @format */
 const showError = document.getElementById("showError");
 const password = document.getElementById("password");
 const username = document.getElementById("username");
