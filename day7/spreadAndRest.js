@@ -15,3 +15,12 @@ console.log(c);
 let obj = { a: 1, b: 2 };
 let obj2 = { ...obj, b: 3 };
 console.log(obj2);
+
+// Rest
+
+const wotEver = (...wee) => {
+  wee.forEach((element) => {
+    console.log(element);
+  });
+};
+wotEver("wee", 2, true, false, "weeeeeeeeeeeeeeeeeeeeeeeeeee");
