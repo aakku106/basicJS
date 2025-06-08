@@ -1,0 +1,117 @@
+/** @format */
+
+* {
+  margin: 1rem;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+  background-color: rgba(128, 128, 128, 0.413);
+  backdrop-filter: blur(10px);
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  border: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgba(255, 239, 213, 0.44);
+  font-size: 1.9rem !important;
+
+  overflow-x: hidden;
+  width: 30rem;
+  margin: auto;
+
+  #add {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    transform: translate(50%, -50%);
+    background-color: rgba(137, 43, 226, 0.484);
+    color: lightgreen;
+    &:hover {
+      transform: scale(1.04) translate(45%, -45%) !important;
+    }
+    &:active {
+      transition: all 0s;
+      transform: scale(1.05) translate(45%, -45%) rotate(380deg) !important;
+    }
+  }
+
+  #search {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    transform: translate(-50%, -50%);
+    background-color: rgba(137, 43, 226, 0.484);
+    color: lightgreen;
+    &:hover {
+      transform: scale(1.04) translate(-40%, -40%) !important;
+    }
+    &:active {
+      transform: scale(1.06) rotate(380deg) !important;
+    }
+  }
+
+  #searchBar {
+    position: absolute;
+    min-height: 1.5rem;
+    min-width: 20rem;
+    top: 2rem;
+    left: 14rem;
+    transform: translate(-50%, -50%);
+    background-color: rgba(137, 43, 226, 0.484);
+    color: lightgreen;
+    display: none;
+  }
+
+  .todo {
+    position: absolute;
+    top: 2rem;
+    left: 15rem;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: rgb(18, 70, 18);
+  }
+
+  ul {
+    margin-top: 6rem;
+    padding: 0.1rem;
+    list-style-type: none;
+
+    li {
+      background-color: rgba(123, 228, 18, 0.409);
+      padding: 0.1rem;
+
+      &:hover {
+        transform: scale(1.04) translateY(-4px);
+      }
+
+      span {
+        background-color: transparent;
+      }
+
+      input {
+        background-color: transparent;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined" !important;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.06) !important;
+  }
+  &:active {
+    cursor: progress;
+    transform: scale(1.08) rotate(380deg) !important;
+  }
+}
+
+.show {
+  display: block !important;
+}
