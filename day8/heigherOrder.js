@@ -9,8 +9,10 @@ let str = ["ccn", "aakku", "master", "we"];
 let wee = str.map((v, i) => {
   console.log(i, ": ", v);
 });
-
+// Filter
 let suuArr = arr.filter((v) => {
   return v % 2 === 0;
 });
 console.log(suuArr);
+
+// Reduce
