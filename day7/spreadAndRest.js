@@ -24,3 +24,12 @@ const wotEver = (...wee) => {
   });
 };
 wotEver("wee", 2, true, false, "weeeeeeeeeeeeeeeeeeeeeeeeeee");
+
+const sum = (...num) => {
+  let result = 0;
+  num.forEach((i) => {
+    result += i;
+  });
+  console.log("Sum is", result);
+};
+sum(1, 2, 3, 4, 5);
