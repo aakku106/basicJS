@@ -6,14 +6,11 @@ const searchBtn = document.getElementById("search");
 const searchBar = document.getElementById("searchBar");
 const ul = document.getElementById("mainContainer");
 
-let storage = [
-  {
-    isDone: false,
-    taskName: "",
-    timeStarted: new Date().setMinutes(),
-    deadLine: "",
-  },
-];
+let storage = [];
+
+let tempSearchBar = {
+  tempHold: "",
+};
 
 const addFieldFunc = () => {
   const li = document.createElement("li");
@@ -30,6 +27,10 @@ const addFieldFunc = () => {
   input.className = "task";
   input.placeholder = "Enter task";
   input.required = true;
+
+  input.addEventListener("keyup", (e) => {
+    if (e.key == "Enter") storage.push(input.value);
+  });
 
   spanCheck.addEventListener("click", () => {
     spanCheck.textContent =
@@ -60,9 +61,22 @@ searchBtn.addEventListener("click", () => {
     searchBar.classList.toggle("show");
     searchBtn.style.left = "85%";
     addBtn.style.display = "none";
+    tempSearchBar.tempHold = searchBar.value;
+    searchBar.value = "";
   } else {
     searchBar.classList.toggle("show");
     searchBtn.style.left = "2rem";
     addBtn.style.display = "block";
+    findValues(tempSearchBar.tempHold);
   }
 });
+
+const findValues = (e) => {
+  tempSearchBar.tempHold = "";
+  let sr = storage.filter((v) => {
+    return v == e;
+  });
+
+  console.log(sr);
+  console.log(storage);
+};
