@@ -17,11 +17,14 @@ const addFieldFunc = () => {
   const spanCheck = document.createElement("span");
   const spanSetting = document.createElement("span");
   const input = document.createElement("input");
+  const spanTick = document.createElement("span");
 
   spanCheck.className = "checkToggle material-symbols-outlined";
   spanCheck.textContent = "radio_button_unchecked";
   spanSetting.className = "setting material-symbols-outlined";
   spanSetting.textContent = "cancel";
+  spanTick.className = "tick material-symbols-outlined";
+  spanTick.textContent = "check";
 
   input.type = "text";
   input.className = "task";
@@ -46,6 +49,7 @@ const addFieldFunc = () => {
   li.append(spanCheck);
   li.append(input);
   li.append(spanSetting);
+  li.append(spanTick);
 
   ul.append(li);
 };
@@ -72,11 +76,11 @@ searchBtn.addEventListener("click", () => {
 });
 
 const findValues = (e) => {
-  tempSearchBar.tempHold = "";
   let sr = storage.filter((v) => {
-    return v == e;
+    return v === e;
   });
 
-  console.log(sr);
   console.log(storage);
+  console.log(sr);
+  tempSearchBar.tempHold = "";
 };
