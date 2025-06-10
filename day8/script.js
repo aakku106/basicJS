@@ -76,7 +76,7 @@ searchBtn.addEventListener("click", () => {
 });
 
 const findValues = (e) => {
-  let sr = storage.filter((v) => {
+  let sr = storage.find((v) => {
     return v === e;
   });
 
