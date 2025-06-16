@@ -7,6 +7,7 @@ export const startTest = () => {
     ${quiz[0].question}  
 </p>
 <ul>
+  in
 <li>${quiz[0].options[1]}</li>
 <li>${quiz[0].options[2]}</li>
 <li>${quiz[0].options[3]}</li>
