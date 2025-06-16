@@ -12,10 +12,13 @@ export const startTest = () => {
 <li>${quiz[0].options[3]}</li>
 <li>${quiz[0].options[4]}</li>
 `;
-  progressBar.value = "1";
   let i = 1;
-  setInterval(() => {
-    progressBar.value = `${i++}`;
+  let interval = setInterval(() => {
+    if (i > quiz.length - 1) {
+      clearInterval(interval);
+      return;
+    }
+    progressBar.value = i;
     body.innerHTML = `
 <p>
     ${quiz[i].question}  
@@ -27,5 +30,5 @@ export const startTest = () => {
 <li>${quiz[i].options[4]}</li>
 `;
     i++;
-  }, 15000);
+  }, 100);
 };
