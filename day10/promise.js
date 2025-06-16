@@ -4,6 +4,9 @@ let myPromis = new Promise((resolve, reject) => {
   else reject("Promise Reject");
 });
 
+// Promise bhanko objeck hooo
+//
+
 myPromis
   .then((msg) => {
     console.log(msg);
