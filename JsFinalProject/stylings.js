@@ -5,11 +5,11 @@ export const progressBar = document.createElement("progress");
 
 var points = 0;
 progressBar.max = 10;
-progressBar.value = 0;
+progressBar.value = 1;
 
 progressBar.style.display = "none";
 body.style.display = "none";
-header.style.marginTop = "12rem";
+header.style.marginTop = "12vh";
 
 export let startingMessage = document.createElement("p");
 export let tempStartButtn = document.createElement("button");
