@@ -29,6 +29,10 @@ body {
     button {
       padding: 1rem;
     }
+
+    p {
+      text-align: center;
+    }
   }
 
   #section {
@@ -42,12 +46,12 @@ body {
       text-align: justify;
     }
 
-    ul {
+    section {
       padding: 1rem;
       columns: 2;
       list-style: none;
 
-      li {
+      button {
         margin: 1rem;
         padding: 1rem;
       }

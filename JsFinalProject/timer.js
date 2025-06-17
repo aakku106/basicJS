@@ -1,9 +1,17 @@
-export const timerParagraph = document.createElement("p");
+/** @format */
+import { header } from "./stylings.js";
+export let timerDiv = document.createElement("p");
 const maxTime = 15;
+timerDiv.style.display = "none";
+export let timerInterval;
+
 export const timer = () => {
+  timerDiv.style.display = "block";
+  timerDiv.innerHTML = `15s`;
   let tempTime = maxTime;
-  if (tempTime < 0) return;
-  for (let i = 0; i < maxTime - 1; i++) {
-    timerParagraph.innerHTML = tempTime--;
-  }
+  timerInterval = setInterval(() => {
+    tempTime--;
+    timerDiv.innerHTML = `${tempTime}s`;
+  }, 999);
 };
+header.append(timerDiv);
