@@ -2,13 +2,22 @@ import { startTest } from "./script.js";
 export const body = document.getElementById("section");
 export const header = document.getElementById("header");
 export const progressBar = document.createElement("progress");
+export const loader = document.getElementById("loader");
 
-var points = 0;
+export let section = document.createElement("section");
+export let pragraph = document.createElement("p");
+
+export let bttn1 = document.createElement("button");
+export let bttn2 = document.createElement("button");
+export let bttn3 = document.createElement("button");
+export let bttn4 = document.createElement("button");
+
 progressBar.max = 10;
 progressBar.value = 0;
 
 progressBar.style.display = "none";
 body.style.display = "none";
+loader.style.display = "none";
 header.style.marginTop = "12vh";
 
 export let startingMessage = document.createElement("p");
