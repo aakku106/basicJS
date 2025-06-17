@@ -1,5 +1,3 @@
-/** @format */
-
 import { startTest } from "./script.js";
 export const body = document.getElementById("section");
 export const header = document.getElementById("header");
@@ -18,6 +16,8 @@ export let tempStartButtn = document.createElement("button");
 
 startingMessage.innerHTML = "10 Questions 10 points Ready for the Challange ?";
 tempStartButtn.innerHTML = "Start TEST !!!";
+
+tempStartButtn.style.marginTop = "2rem";
 
 startingMessage.style.fontSize = "4em";
 header.style.height = "max-content";

@@ -7,21 +7,28 @@ import { timer, timerDiv, timerInterval } from "./timer.js";
 export const startTest = () => {
   timer();
   header.append(timerDiv);
+  let section = document.createElement("section");
+  let pragraph = document.createElement("p");
 
-  body.innerHTML = `
-<p>
-    ${quiz[0].question}  
-</p>
-<section>
-<button>${quiz[0].options[1]}</button>
-  <br>
-<button>${quiz[0].options[2]}</button>
-  <br>
-<button>${quiz[0].options[3]}</button>
-  <br>
-<button>${quiz[0].options[4]}</button>
-</section>
-`;
+  let bttn1 = document.createElement("button");
+  let bttn2 = document.createElement("button");
+  let bttn3 = document.createElement("button");
+  let bttn4 = document.createElement("button");
+
+  pragraph.innerHTML = `${quiz[0].question}`;
+
+  bttn1.innerHTML = `${quiz[0].options[1]}`;
+  bttn2.innerHTML = `${quiz[0].options[2]}`;
+  bttn3.innerHTML = `${quiz[0].options[3]}`;
+  bttn4.innerHTML = `${quiz[0].options[4]}`;
+
+  section.append(bttn1);
+  section.append(bttn2);
+  section.append(bttn3);
+  section.append(bttn4);
+  body.append(pragraph);
+  body.append(section);
+
   let i = 1;
   let interval = setInterval(() => {
     clearInterval(timerInterval);
@@ -32,20 +39,18 @@ export const startTest = () => {
       clearInterval(interval);
       return;
     }
-    body.innerHTML = `
-<p>
-    ${quiz[i].question}  
-</p>
-<section>
-<button>${quiz[i].options[1]}</button>
-  <br>
-<button>${quiz[i].options[2]}</button>
-  <br>
-<button>${quiz[i].options[3]}</button>
-  <br>
-<button>${quiz[i].options[4]}</button>
-</section>
-`;
+
+    pragraph.innerHTML = `${quiz[i].question}`;
+    bttn1.innerHTML = `${quiz[i].options[1]}`;
+    bttn2.innerHTML = `${quiz[i].options[2]}`;
+    bttn3.innerHTML = `${quiz[i].options[3]}`;
+    bttn4.innerHTML = `${quiz[i].options[4]}`;
+    section.append(bttn1);
+    section.append(bttn2);
+    section.append(bttn3);
+    section.append(bttn4);
+    body.append(pragraph);
+    body.append(section);
     i++;
-  }, 15000);
+  }, 1000);
 };
