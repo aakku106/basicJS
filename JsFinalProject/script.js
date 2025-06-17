@@ -1,7 +1,12 @@
+/** @format */
+
 import { quiz } from "./question.js";
 import { body, progressBar } from "./stylings.js";
+import { timer, timerParagraph } from "./timer.js";
 
 export const startTest = () => {
+  timer();
+  header.append(timerParagraph);
   body.innerHTML = `
 <p>
     ${quiz[0].question}  
@@ -15,11 +20,13 @@ export const startTest = () => {
 `;
   let i = 1;
   let interval = setInterval(() => {
+    timer();
+    header.append(timerParagraph);
+    progressBar.value = i;
     if (i > quiz.length - 1) {
       clearInterval(interval);
       return;
     }
-    progressBar.value = i;
     body.innerHTML = `
 <p>
     ${quiz[i].question}  
@@ -31,5 +38,5 @@ export const startTest = () => {
 <li>${quiz[i].options[4]}</li>
 `;
     i++;
-  }, 100);
+  }, 2000);
 };

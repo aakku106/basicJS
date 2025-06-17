@@ -1,86 +1,83 @@
+/** @format */
+
 * {
-	margin: 0;
-	padding: 0;
-	border-radius: 12px;
-	border: none;
-	transition: all .3s ease-in-out;
-	backdrop-filter: blur(8px);
-	text-align: center;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
+  text-align: center;
 }
 
 body {
-	margin: auto;
-	background-color: rebeccapurple;
-	min-height: 100vh;
-	max-width: 80vw;
-	border: 1px solid white;
-	position: relative;
-	overflow: hidden;
-	padding: 1rem;
+  margin: auto;
+  background-color: rgba(58, 13, 104, 0.626);
+  min-height: 100vh;
+  max-width: 80vw;
+  border: 1px solid white;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
 
-	#header {
-		background-color: darkgray;
-		height: 15vh;
-		z-index: 100;
-		padding: 1rem;
+  #header {
+    background-color: rgba(163, 129, 129, 0.595);
+    height: 15vh;
+    z-index: 100;
+    padding: 1rem;
 
+    button {
+      padding: 1rem;
+    }
+  }
 
-		button {
-			padding: 1rem;
-		}
+  #section {
+    margin-top: 0.8rem;
+    padding: 1rem;
+    height: 70vh;
+    background-color: rgba(68, 220, 190, 0.229);
 
-	}
+    p {
+      padding: 1rem;
+      text-align: justify;
+    }
 
-	#section {
-		margin-top: .8rem;
-		padding: 1rem;
-		height: 70vh;
-		background-color: gray;
+    ul {
+      padding: 1rem;
+      columns: 2;
+      list-style: none;
 
-		p {
-			padding: 1rem;
-			text-align: justify;
-		}
-
-		ul {
-			padding: 1rem;
-			columns: 2;
-			list-style: none;
-
-
-			li {
-				margin: 1rem;
-				padding: 1rem;
-			}
-		}
-	}
+      li {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  }
 }
 
 progress::before {
-	content: "Loading: " attr(value) "%";
-	position: absolute;
-	width: 30%;
-	text-align: center;
-	font-size: 18px;
-	color: blue;
+  content: "Loading: " attr(value) "%";
+  position: absolute;
+  width: 30%;
+  text-align: center;
+  font-size: 18px;
+  color: blue;
 }
 
 progress {
-	min-width: 100%;
-	border: 2px solid grey;
-	box-shadow: 0px 0px 12px 1px lightgreen;
-
+  min-width: 100%;
+  border: 2px solid grey;
+  box-shadow: 0px 0px 12px 1px #5ac45e80;
 }
 
 progress::-webkit-progress-bar {
-	background-color: #5ac45d;
+  background-color: #5ac45e80;
 }
 
 progress::-webkit-progress-value {
-	background-color: #5ac45d;
-
+  background-color: #5ac45e80;
 }
 
 progress::-moz-progress-bar {
-	background-color: #5ac45d;
+  background-color: #5ac45e80;
 }

@@ -1,3 +1,5 @@
+/** @format */
+
 import { startTest } from "./script.js";
 export const body = document.getElementById("section");
 export const header = document.getElementById("header");
@@ -5,7 +7,7 @@ export const progressBar = document.createElement("progress");
 
 var points = 0;
 progressBar.max = 10;
-progressBar.value = 1;
+progressBar.value = 0;
 
 progressBar.style.display = "none";
 body.style.display = "none";
