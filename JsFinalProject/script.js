@@ -27,6 +27,16 @@ export const startTest = () => {
   bttn3.addEventListener("click", handleAnswer);
   bttn4.addEventListener("click", handleAnswer);
 
+  function handleAnswer(e) {
+    loader.style.display = "block";
+    section.style.display = "none";
+    pragraph.style.display = "none";
+
+    if (e.target.innerHTML === quiz[i].answer) {
+      points++;
+    }
+  }
+
   updateQuestion();
 
   let interval = setInterval(() => {
@@ -37,7 +47,7 @@ export const startTest = () => {
     i++;
     progressBar.value = i + 1;
 
-    if (i >= quiz.length) {
+    if (i >= quiz.length - 1) {
       clearInterval(interval);
       clearInterval(timerInterval);
       showResults();
@@ -45,9 +55,9 @@ export const startTest = () => {
     }
 
     updateQuestion();
-  }, 6000);
+  }, 600);
 
-  const updateQuestion = () => {
+  function updateQuestion() {
     loader.style.display = "none";
     section.style.display = "block";
     pragraph.style.display = "block";
@@ -65,23 +75,16 @@ export const startTest = () => {
     section.append(bttn4);
     body.append(pragraph);
     body.append(section);
-  };
+  }
 
-  const handleAnswer = (e) => {
-    loader.style.display = "block";
-    section.style.display = "none";
-    pragraph.style.display = "none";
-
-    if (e.target.innerHTML === quiz[i].answer) {
-      points++;
-      console.log("Points: " + points);
-    }
-  };
-
-  const showResults = () => {
-    section.innerHTML = "";
+  function showResults() {
     pragraph.innerHTML = `Quiz Complete! Your score: ${points} out of ${quiz.length}`;
+    section.style = "none";
+    bttn1.style.display = "none";
+    bttn2.style.display = "none";
+    bttn3.style.display = "none";
+    bttn4.style.display = "none";
     timerDiv.style.display = "none";
     loader.style.display = "none";
-  };
+  }
 };

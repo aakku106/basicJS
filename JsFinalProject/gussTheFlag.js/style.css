@@ -1,0 +1,188 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+body {
+  background: linear-gradient(120deg, #a1c4fd, #c2e9fb, #fdcbf1);
+  background-size: 300% 300%;
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.country-name {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.country-name h2 {
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.flags-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.flag-option {
+  flex: 1;
+  height: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+}
+
+.flag-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.flag-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.flag-option.correct {
+  border: 2px solid rgba(72, 187, 120, 0.8);
+  background: rgba(72, 187, 120, 0.2);
+  box-shadow: 0 0 15px rgba(72, 187, 120, 0.5);
+}
+
+.flag-option.incorrect {
+  border: 2px solid rgba(229, 62, 62, 0.8);
+  background: rgba(229, 62, 62, 0.2);
+  box-shadow: 0 0 15px rgba(229, 62, 62, 0.5);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.next-btn,
+.restart-btn {
+  padding: 12px 25px;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+}
+
+.next-btn:hover,
+.restart-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.next-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.result {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 500;
+  min-height: 24px;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .glass-card {
+    padding: 15px;
+  }
+
+  .flags-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flag-option {
+    height: 100px;
+  }
+
+  .country-name h2 {
+    font-size: 1.1rem;
+  }
+}

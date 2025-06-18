@@ -1,3 +1,5 @@
+/** @format */
+
 import { startTest } from "./script.js";
 export const body = document.getElementById("section");
 export const header = document.getElementById("header");
@@ -38,8 +40,8 @@ tempStartButtn.addEventListener("click", () => {
   progressBar.style.display = "block";
   body.style.display = "block";
   header.style.marginTop = "0";
-  header.innerHTML = "";
   header.style.height = "15vh";
+  header.innerHTML = "";
   tempStartButtn.innerHTML = "";
   startingMessage.innerHTML = "";
   tempStartButtn.style.display = "none";

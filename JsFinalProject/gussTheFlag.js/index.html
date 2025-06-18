@@ -1,0 +1,58 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Flag</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="glass-card">
+        <h1>Guess The Flag</h1>
+        <div class="game-info">
+          <div class="round">Round: <span id="round-count">1</span>/15</div>
+          <div class="score">Score: <span id="score">0</span></div>
+        </div>
+
+        <div class="country-name">
+          <h2>Which flag belongs to: <span id="country-name">Country</span>?</h2>
+        </div>
+
+        <div class="flags-container">
+          <div class="flag-option">
+            <img id="flag1" src="" alt="Flag Option 1" class="flag-img">
+          </div>
+          <div class="flag-option">
+            <img id="flag2" src="" alt="Flag Option 2" class="flag-img">
+          </div>
+          <div class="flag-option">
+            <img id="flag3" src="" alt="Flag Option 3" class="flag-img">
+          </div>
+        </div>
+
+        <div id="result" class="result"></div>
+
+        <div class="button-container">
+          <button id="next-btn" class="next-btn" disabled>Next Question</button>
+          <button
+            id="restart-btn"
+            class="restart-btn"
+            style="display: none;"
+          >
+            Play Again
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
