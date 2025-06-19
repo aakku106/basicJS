@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       arr[2][2] !== 0
     )
       showGame(); //row2 ko
-    // sure ko 3 ota row done
+    // suru ko 3 ota row done
     else if (
       arr[0][0] === arr[1][0] &&
       arr[1][0] === arr[2][0] &&
@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
       arr[2][2] !== 0
     )
       showGame(); // col2 ko
+    // suru ko 3 ota col done
     else if (
       arr[0][0] === arr[1][1] &&
       arr[1][1] === arr[2][2] &&
@@ -144,6 +145,6 @@ document.addEventListener("DOMContentLoaded", () => {
     else return;
   };
   const showGame = () => {
-    console.log("weeeeeeeeee", arr);
+    container.innerHTML = "weee";
   };
 });

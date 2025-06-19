@@ -18,14 +18,13 @@ body {
     min-height: 100vh;
     min-width: 80vw !important;
     margin-top: -3rem;
+    color: pink;
 
     .cointainer {
       min-height: 50vh;
 
       span {
         background-color: #fff;
-
-        img {}
       }
     }
   }
