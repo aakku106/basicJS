@@ -21,6 +21,12 @@ body {
 
     .cointainer {
       min-height: 50vh;
+
+      span {
+        background-color: #fff;
+
+        img {}
+      }
     }
   }
 
