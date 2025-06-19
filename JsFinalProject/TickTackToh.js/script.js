@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (e.target.id === "box8") arr[2][1] = 1;
     else if (e.target.id === "box9") arr[2][2] = 1;
     checkifGame();
-    console.log(arr);
   };
   const updateArrayX = (e) => {
     if (e.target.id === "box1") arr[0][0] = 2;
@@ -87,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (e.target.id === "box8") arr[2][1] = 2;
     else if (e.target.id === "box9") arr[2][2] = 2;
     checkifGame();
-    console.log(arr);
   };
   const checkifGame = () => {
     if (arr[0][0] === arr[0][1] && arr[0][1] === arr[0][2] && arr[0][0] !== 0)

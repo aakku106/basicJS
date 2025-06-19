@@ -5,7 +5,6 @@
   border-radius: 12px;
   backdrop-filter: blur(6px);
   overflow: hidden;
-  border: 2px dotted gray;
   text-align: center;
 }
 
@@ -14,7 +13,6 @@ body {
 
   #main {
     margin: auto;
-    border: 2px dotted white;
     min-height: 100vh;
     min-width: 80vw !important;
     margin-top: -3rem;
@@ -22,6 +20,7 @@ body {
 
     .cointainer {
       min-height: 50vh;
+      border: 2px dotted white;
 
       span {
         background-color: #fff;
