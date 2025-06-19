@@ -1,7 +1,11 @@
+/** @format */
+
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.getElementById("main");
   let container = document.createElement("section");
   body.append(container);
+  let turnShow = document.createElement("h1");
+  container.append(turnShow);
   container.className = "cointainer";
   let row1 = document.createElement("div");
   let row2 = document.createElement("div");
@@ -34,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   box9.id = "box9";
 
   let turn = "O";
+  let count = 0;
   let gameEnded = false;
   let arr = [
     [0, 0, 0],
@@ -42,16 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   const handleClick = (e) => {
     if (gameEnded || e.target.textContent !== "") return;
+    if (!gameEnded && count >= 9) draw();
     if (e.target.textContent == "") {
       if (turn === "X") {
+        turnShow.textContent = `Next turn is ${turn}`;
         e.target.innerHTML = turn;
         updateArrayX(e);
         turn = "O";
       } else {
+        turnShow.textContent = `Next turn is ${turn}`;
+        turnShow.innerHTML = turn;
         e.target.innerHTML = turn;
         updateArrayO(e);
         turn = "X";
       }
+      count++;
     } else return;
   };
   box1.addEventListener("click", handleClick);
@@ -143,6 +153,17 @@ document.addEventListener("DOMContentLoaded", () => {
     else return;
   };
   const showGame = () => {
+    gameEnded = true;
+    box1.style.cursor = "not-allowed";
+    box2.style.cursor = "not-allowed";
+    box3.style.cursor = "not-allowed";
+    box4.style.cursor = "not-allowed";
+    box5.style.cursor = "not-allowed";
+    box6.style.cursor = "not-allowed";
+    box7.style.cursor = "not-allowed";
+    box8.style.cursor = "not-allowed";
+    box9.style.cursor = "not-allowed";
+    turnShow.style.display = "none";
     let winnerWrapper = document.createElement("div");
     winnerWrapper.className = "winner";
     container.append(winnerWrapper);
@@ -153,6 +174,17 @@ document.addEventListener("DOMContentLoaded", () => {
     container.append(reStart);
     reStart.innerText = "Play Again";
     reStart.onclick = () => location.reload();
+  };
+  const draw = () => {
     gameEnded = true;
+    turnShow.style.display = "none";
+    let wrapper = document.createElement("div");
+    container.append(wrapper);
+    let draw = document.createElement("h1");
+    draw.textContent = `No one wins its draw `;
+    let reStart = document.createElement("button");
+    container.append(reStart);
+    reStart.innerText = "Play Again";
+    reStart.onclick = () => location.reload();
   };
 });
