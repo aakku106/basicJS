@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   box8.id = "box8";
   box9.id = "box9";
 
-  let turn = "X";
+  let turn = "O";
   let arr = [
     [0, 0, 0],
     [0, 0, 0],
@@ -43,13 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.textContent == "") {
       if (turn === "X") {
         e.target.innerHTML = turn;
-        console.log(e);
         turn = "O";
-        check(e);
+        updateArrayX(e);
       } else {
         e.target.innerHTML = turn;
-        console.log(e);
         turn = "X";
+        updateArrayO(e);
       }
     } else return;
   };
@@ -64,8 +63,87 @@ document.addEventListener("DOMContentLoaded", () => {
   box8.addEventListener("click", handleClick);
   box9.addEventListener("click", handleClick);
 
-  const check = (e) => {
+  const updateArrayO = (e) => {
     if (e.target.id === "box1") arr[0][0] = 1;
+    else if (e.target.id === "box2") arr[0][1] = 1;
+    else if (e.target.id === "box3") arr[0][2] = 1;
+    else if (e.target.id === "box4") arr[1][0] = 1;
+    else if (e.target.id === "box5") arr[1][1] = 1;
+    else if (e.target.id === "box6") arr[1][2] = 1;
+    else if (e.target.id === "box7") arr[2][0] = 1;
+    else if (e.target.id === "box8") arr[2][1] = 1;
+    else if (e.target.id === "box9") arr[2][2] = 1;
+    checkifGame();
     console.log(arr);
+  };
+  const updateArrayX = (e) => {
+    if (e.target.id === "box1") arr[0][0] = 2;
+    else if (e.target.id === "box2") arr[0][1] = 2;
+    else if (e.target.id === "box3") arr[0][2] = 2;
+    else if (e.target.id === "box4") arr[1][0] = 2;
+    else if (e.target.id === "box5") arr[1][1] = 2;
+    else if (e.target.id === "box6") arr[1][2] = 2;
+    else if (e.target.id === "box7") arr[2][0] = 2;
+    else if (e.target.id === "box8") arr[2][1] = 2;
+    else if (e.target.id === "box9") arr[2][2] = 2;
+    checkifGame();
+    console.log(arr);
+  };
+  const checkifGame = () => {
+    if (arr[0][0] === arr[0][1] && arr[0][1] === arr[0][2] && arr[0][0] !== 0)
+      showGame(); //row0 ko
+    else if (
+      arr[1][0] === arr[1][1] &&
+      arr[1][1] === arr[1][2] &&
+      arr[1][1] !== 0
+    )
+      showGame(); //row1 ko
+    else if (
+      arr[2][0] === arr[2][1] &&
+      arr[2][1] === arr[2][2] &&
+      arr[2][2] !== 0
+    )
+      showGame(); //row2 ko
+    // sure ko 3 ota row done
+    else if (
+      arr[0][0] === arr[1][0] &&
+      arr[1][0] === arr[2][0] &&
+      arr[0][0] !== 0
+    )
+      showGame(); //col0 ko
+    else if (
+      arr[0][1] === arr[1][1] &&
+      arr[1][1] === arr[2][1] &&
+      arr[1][1] !== 0 //col1 ko
+    )
+      showGame();
+    else if (
+      arr[0][2] === arr[1][2] &&
+      arr[1][2] === arr[2][2] &&
+      arr[2][2] !== 0
+    )
+      showGame(); // col2 ko
+    else if (
+      arr[0][0] === arr[1][1] &&
+      arr[1][1] === arr[2][2] &&
+      arr[2][2] !== 0
+    )
+      showGame();
+    //*00
+    //0*0
+    //00* ko lagi
+    else if (
+      arr[0][2] === arr[1][1] &&
+      arr[1][1] === arr[2][0] &&
+      arr[1][1] !== 0
+    )
+      showGame();
+    // 00*
+    // 0*0
+    // *00 ko lagi
+    else return;
+  };
+  const showGame = () => {
+    console.log("weeeeeeeeee", arr);
   };
 });
