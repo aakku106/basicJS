@@ -34,25 +34,26 @@ document.addEventListener("DOMContentLoaded", () => {
   box9.id = "box9";
 
   let turn = "O";
+  let gameEnded = false;
   let arr = [
     [0, 0, 0],
     [0, 0, 0],
     [0, 0, 0],
   ];
   const handleClick = (e) => {
+    if (gameEnded || e.target.textContent !== "") return;
     if (e.target.textContent == "") {
       if (turn === "X") {
         e.target.innerHTML = turn;
-        turn = "O";
         updateArrayX(e);
+        turn = "O";
       } else {
         e.target.innerHTML = turn;
-        turn = "X";
         updateArrayO(e);
+        turn = "X";
       }
     } else return;
   };
-
   box1.addEventListener("click", handleClick);
   box2.addEventListener("click", handleClick);
   box3.addEventListener("click", handleClick);
@@ -62,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
   box7.addEventListener("click", handleClick);
   box8.addEventListener("click", handleClick);
   box9.addEventListener("click", handleClick);
-
   const updateArrayO = (e) => {
     if (e.target.id === "box1") arr[0][0] = 1;
     else if (e.target.id === "box2") arr[0][1] = 1;
@@ -143,6 +143,16 @@ document.addEventListener("DOMContentLoaded", () => {
     else return;
   };
   const showGame = () => {
-    container.innerHTML = "weee";
+    let winnerWrapper = document.createElement("div");
+    winnerWrapper.className = "winner";
+    container.append(winnerWrapper);
+    let winner = document.createElement("h1");
+    winnerWrapper.append(winner);
+    winner.innerHTML = `The winner is: ${turn} 🥳`;
+    let reStart = document.createElement("button");
+    container.append(reStart);
+    reStart.innerText = "Play Again";
+    reStart.onclick = () => location.reload();
+    gameEnded = true;
   };
 });
