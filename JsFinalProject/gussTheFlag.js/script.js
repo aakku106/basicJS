@@ -1,5 +1,3 @@
-/** @format */
-
 const allCountries = [
   { name: "France", flag: "https://flagcdn.com/w320/fr.png" },
   { name: "Japan", flag: "https://flagcdn.com/w320/jp.png" },
@@ -48,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let correctAnswerIndex = 0;
   let hasAnswered = false;
 
-  function startGame() {
+  startGame = () => {
     currentRound = 1;
     score = 0;
     roundCount.textContent = currentRound;
@@ -58,9 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
     restartButton.style.display = "none";
 
     loadNewQuestion();
-  }
+  };
 
-  function loadNewQuestion() {
+  loadNewQuestion = () => {
     hasAnswered = false;
     resultElement.textContent = "";
 
@@ -82,9 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
     flag3.src = questionCountries[2].flag;
 
     roundCount.textContent = currentRound;
-  }
+  };
 
-  function handleFlagClick(event) {
+  handleFlagClick = (event) => {
     if (hasAnswered) return;
 
     hasAnswered = true;
@@ -108,19 +106,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     nextButton.disabled = false;
-  }
+  };
 
-  function nextQuestion() {
+  nextQuestion = () => {
     currentRound++;
 
     if (currentRound > maxRounds) {
-      resultElement.textContent = `Game Over! Your final score is ${score}/${maxRounds}`;
+      resultElement.textContent = `Game Over!  final score is ${score}/${maxRounds}`;
       nextButton.style.display = "none";
       restartButton.style.display = "block";
     } else {
       loadNewQuestion();
     }
-  }
+  };
 
   flagOptions.forEach((option) => {
     option.addEventListener("click", handleFlagClick);
