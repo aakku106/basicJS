@@ -3,7 +3,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.getElementById("main");
   let container = document.createElement("section");
+  let gameTitle = document.createElement("h1");
+  gameTitle.textContent = "Tic Tac Toe";
+  gameTitle.className = "game-title";
+  body.append(gameTitle);
   body.append(container);
+
   let turnShow = document.createElement("h1");
   container.append(turnShow);
   container.className = "cointainer";
@@ -46,20 +51,23 @@ document.addEventListener("DOMContentLoaded", () => {
     [0, 0, 0],
   ];
   const handleClick = (e) => {
-    if (gameEnded || e.target.textContent !== "") return;
-    if (!gameEnded && count >= 9) draw();
+    if (gameEnded) return;
+    if (count >= 0) gameTitle.style.display = "none";
+    if (count >= 8 && gameEnded === false) draw();
     if (e.target.textContent == "") {
       if (turn === "X") {
-        turnShow.textContent = `Next turn is ${turn}`;
         e.target.innerHTML = turn;
+        e.target.classList.add("x-mark");
         updateArrayX(e);
         turn = "O";
+        turnShow.textContent = `Next turn is: ${turn}`;
       } else {
-        turnShow.textContent = `Next turn is ${turn}`;
         turnShow.innerHTML = turn;
         e.target.innerHTML = turn;
+        e.target.classList.add("o-mark");
         updateArrayO(e);
         turn = "X";
+        turnShow.textContent = `Next turn is: ${turn}`;
       }
       count++;
     } else return;
@@ -174,6 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.append(reStart);
     reStart.innerText = "Play Again";
     reStart.onclick = () => location.reload();
+    gameAnimation();
   };
   const draw = () => {
     gameEnded = true;
@@ -181,10 +190,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let wrapper = document.createElement("div");
     container.append(wrapper);
     let draw = document.createElement("h1");
+    wrapper.append(draw);
     draw.textContent = `No one wins its draw `;
     let reStart = document.createElement("button");
     container.append(reStart);
     reStart.innerText = "Play Again";
     reStart.onclick = () => location.reload();
+    body.style.background =
+      "linear-gradient(45deg,rgb(225, 90, 128) 0%,rgb(212, 27, 27) 100%)";
+    container.style.background =
+      "linear-gradient(45deg,rgba(225, 90, 128, 0.47) 0%,rgba(212, 27, 27, 0.46) 100%)";
   };
+  const gameAnimation = () =>
+  {
+    
+  }
 });
