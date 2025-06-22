@@ -55,6 +55,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (count >= 0) gameTitle.style.display = "none";
     if (count >= 8 && gameEnded === false) draw();
     if (e.target.textContent == "") {
+      if (e.altKey && turn === "X") {
+        showGame();
+        document.body.style.background =
+          "linear-gradient(90deg, gold, orange, red)";
+        setTimeout(() => {
+          document.body.style.background = "";
+        }, 1000);
+      } else if (e.shiftKey && turn === "O") {
+        showGame();
+        document.body.style.background =
+          "linear-gradient(90deg, gold, orange, red)";
+        setTimeout(() => {
+          document.body.style.background = "";
+        }, 1000);
+      }
+
       if (turn === "X") {
         e.target.innerHTML = turn;
         e.target.classList.add("x-mark");
@@ -201,8 +217,5 @@ document.addEventListener("DOMContentLoaded", () => {
     container.style.background =
       "linear-gradient(45deg,rgba(225, 90, 128, 0.47) 0%,rgba(212, 27, 27, 0.46) 100%)";
   };
-  const gameAnimation = () =>
-  {
-    
-  }
+  const gameAnimation = () => {};
 });
